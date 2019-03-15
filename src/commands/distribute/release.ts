@@ -41,6 +41,8 @@ export default class ReleaseBinaryCommand extends AppCommand {
   public async run(client: AppCenterClient): Promise<CommandResult> {
     const app: DefaultApp = this.app;
 
+    console.warn("This command has been deprecated. Please use 'appcenter distribute releases add-destination' command.");
+
     debug("Check that user hasn't selected both --release-notes and --release-notes-file");
     this.validateParameters();
 
